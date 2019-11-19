@@ -17,14 +17,14 @@ netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" p
 busybox64.exe shred ftprunlist.txt
 ncpa.cpl
 :: -- Загружаем инструментарий ---
-busybox64.exe wget http://<address>/files/KMSAutoLite.zip http://<address>/files/curl.zip
+busybox64.exe wget http://<address>/files/ConsoleAct.zip http://<address>/files/curl.zip
 echo "Configure the network then"
 pause
 :: --- Начинаем разбираться ---
 :: --- Активируем OS ---
 echo "Activating OS"
-busybox64.exe unzip -o KMSAutoLite.zip
-"KMSAuto x64.exe" /win=act /kmsset=yes /task=yes
+busybox64.exe unzip -o ConsoleAct.zip
+ConsoleAct_x64.exe /win=act /taskwin
 busybox64.exe sleep 10
 :: --- Формируем и устанавливаем 12 символьный пароль админа ---
 echo "Setting up Administrator account password"
